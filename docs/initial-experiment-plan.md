@@ -4,7 +4,7 @@ Planning date: November 1, 2026. Implementation update: the staged CLI is built;
 
 Build a reproducible Python experiment that tests whether J++ readouts improve answer-only GSM8K self-correction beyond both no-readout and shuffled-readout training. The first deliverable is a small, validated generation-and-readout pipeline. Full LoRA training follows only after the lens and development-set checks pass.
 
-This implements [the initial experiment proposal](../Initial%20Experiment%20Readout-Trained%20Self-Correction%20on%20GSM8K.md). Choices below marked as proposed make underspecified parts of that proposal executable; they are not experimental findings.
+This implements the original GSM8K experiment proposal. The [revised proposal](../Initial%20Experiment%20Readout-Trained%20Self-Correction%20on%20GSM8K%20Revised.md) specifies MATH, Qwen3.5-9B, and a released lens; those changes are not implemented here. Choices below marked as proposed make underspecified parts of the original proposal executable; they are not experimental findings.
 
 ## What exists and what needs checking
 

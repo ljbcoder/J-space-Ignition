@@ -3,7 +3,11 @@ Neurotech@Berkeley: FA26 Software Project
 
 An executable research pipeline for answer-only GSM8K self-correction with Qwen2.5-7B-Instruct and J++ workspace readouts. Three LoRA arms share the same first answers, example manifest, targets, and seeds: own readout, no readout, and a readout from another problem.
 
-The [experiment proposal](Initial%20Experiment%20Readout-Trained%20Self-Correction%20on%20GSM8K.md), [build plan](docs/initial-experiment-plan.md), and [run guide](docs/run-guide.md) describe the protocol and staged execution. See [implementation verification](docs/implementation-status.md) for completed checks and the remaining GPU work.
+The [build plan](docs/initial-experiment-plan.md) and [run guide](docs/run-guide.md) describe the implemented GSM8K protocol and staged execution. See [implementation verification](docs/implementation-status.md) for completed checks and the remaining GPU work.
+
+The [revised proposal](Initial%20Experiment%20Readout-Trained%20Self-Correction%20on%20GSM8K%20Revised.md) instead specifies MATH, Qwen3.5-9B, and a released lens. That revision is not implemented by this pipeline or its notebook launcher.
+
+For Jupyter, Colab, or a cloud A100 runtime, open the [notebook launcher](output/jupyter-notebook/run-jreflect.ipynb). It walks through environment setup, GPU checks, each experiment stage, and optional checkpoint backup/restore. Notebook helper functions were checked locally; the full cloud GPU sequence has not been executed here.
 
 ## Install and check locally
 
