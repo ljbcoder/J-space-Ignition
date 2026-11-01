@@ -1,0 +1,43 @@
+experiment = "qwen25-gsm8k-initial"
+seed = 42
+
+[model]
+name = "Qwen/Qwen2.5-7B-Instruct"
+revision = "main" # `prepare` resolves this to an immutable Hub commit.
+dtype = "bfloat16"
+device = "cuda"
+max_new_tokens = 32
+max_length = 2048
+
+[data]
+name = "openai/gsm8k"
+subset = "main"
+revision = "main"
+train_count = 7473
+test_count = 1319
+dev_size = 500
+gate_size = 200
+
+[readout]
+layers = [3, 7, 11, 15, 19, 23]
+middle = [11, 15]
+late = [19, 23]
+top_k = 20
+concepts = 5
+
+[training]
+seeds = [42, 43, 44]
+rank = 16
+alpha = 32
+dropout = 0.05
+learning_rate = 0.0001
+epochs = 2
+micro_batch = 1
+effective_batch = 16
+warmup_ratio = 0.0
+gradient_checkpointing = true
+target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+[evaluation]
+bootstrap_samples = 10000
+confidence = 0.95
