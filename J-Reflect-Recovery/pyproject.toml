@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jreflect-recovery"
+version = "0.1.0"
+description = "Frozen-model J++ information recovery pilot"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+model = ["torch>=2.4,<3", "transformers>=5.2,<6", "huggingface-hub>=0.30,<3", "accelerate>=1,<2"]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+jrecovery = "jrecovery.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["model: real tiny neural network tests; no downloads"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

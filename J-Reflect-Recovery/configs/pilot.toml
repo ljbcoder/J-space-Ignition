@@ -1,0 +1,30 @@
+name = "qwen35-jpp-recovery-pilot"
+seed = 42
+
+[model]
+name = "Qwen/Qwen3.5-9B"
+revision = "main" # Resolved to an immutable Hub commit by prepare.
+device = "cuda"
+dtype = "bfloat16"
+max_new_tokens = 64
+max_context = 4096
+temperature = 0.0
+enable_thinking = false
+
+[lens]
+repo = "koayon/jpp-lenses"
+revision = "main" # Resolved and recorded independently of the model.
+filename = "qwen3.5-9b/lens.pt"
+layers = [4, 8, 12, 16, 20, 24, 28] # Zero-based post-block indices.
+top_k = 10
+save_activations = true
+
+[data]
+dev_count = 200
+test_count = 1000 # Fixed number of first attempts, not a stopping rule on significance.
+tail_steps = 3 # Additional operations after the base task; tune only on development.
+
+[analysis]
+bootstrap_samples = 2000
+confidence = 0.95
+minimum_dev_errors = 10
