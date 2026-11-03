@@ -1,0 +1,263 @@
+{
+  "mode": "research",
+  "split": "dev",
+  "status": "complete",
+  "first_attempts": 200,
+  "first_attempts_expected": 200,
+  "initial_correct": 0,
+  "initial_wrong": 200,
+  "first_format_failures": 0,
+  "first_accuracy": 0.0,
+  "corrections_observed": 800,
+  "corrections_expected": 800,
+  "ablations_observed": 0,
+  "ablations_expected": 0,
+  "detection": {
+    "all_eligible": {
+      "n": 0,
+      "jpp_hit_rate": null,
+      "logit_hit_rate": null,
+      "shuffled_hit_rate": null,
+      "jpp_mrr": null,
+      "jpp_vs_logit": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      },
+      "jpp_vs_shuffled": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      }
+    },
+    "initially_wrong": {
+      "n": 0,
+      "jpp_hit_rate": null,
+      "logit_hit_rate": null,
+      "shuffled_hit_rate": null,
+      "jpp_mrr": null,
+      "jpp_vs_logit": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      },
+      "jpp_vs_shuffled": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      }
+    },
+    "initially_correct": {
+      "n": 0,
+      "jpp_hit_rate": null,
+      "logit_hit_rate": null,
+      "shuffled_hit_rate": null,
+      "jpp_mrr": null,
+      "jpp_vs_logit": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      },
+      "jpp_vs_shuffled": {
+        "n": 0,
+        "difference": null,
+        "ci": [
+          null,
+          null
+        ],
+        "wins": 0,
+        "losses": 0,
+        "p": null
+      }
+    }
+  },
+  "conditions": {
+    "retry_only": {
+      "wrong_attempts_observed": 200,
+      "wrong_attempts_expected": 200,
+      "wrong_to_right": 0,
+      "correction_rate": 0.0,
+      "correct_attempts_observed": 0,
+      "correct_to_wrong": 0,
+      "harm_rate": null,
+      "second_format_failures": 0,
+      "answer_change_rate": 0.0,
+      "prompt_tokens": 24515,
+      "generated_tokens": 2128,
+      "seconds": 97.42318386400001
+    },
+    "error_only": {
+      "wrong_attempts_observed": 200,
+      "wrong_attempts_expected": 200,
+      "wrong_to_right": 0,
+      "correction_rate": 0.0,
+      "correct_attempts_observed": 0,
+      "correct_to_wrong": 0,
+      "harm_rate": null,
+      "second_format_failures": 0,
+      "answer_change_rate": 0.005,
+      "prompt_tokens": 23915,
+      "generated_tokens": 2129,
+      "seconds": 96.9716282629995
+    },
+    "shuffled_jpp": {
+      "wrong_attempts_observed": 200,
+      "wrong_attempts_expected": 200,
+      "wrong_to_right": 0,
+      "correction_rate": 0.0,
+      "correct_attempts_observed": 0,
+      "correct_to_wrong": 0,
+      "harm_rate": null,
+      "second_format_failures": 0,
+      "answer_change_rate": 0.0,
+      "prompt_tokens": 85515,
+      "generated_tokens": 2128,
+      "seconds": 101.2528781830004
+    },
+    "authentic_jpp": {
+      "wrong_attempts_observed": 200,
+      "wrong_attempts_expected": 200,
+      "wrong_to_right": 0,
+      "correction_rate": 0.0,
+      "correct_attempts_observed": 0,
+      "correct_to_wrong": 0,
+      "harm_rate": null,
+      "second_format_failures": 0,
+      "answer_change_rate": 0.0,
+      "prompt_tokens": 85515,
+      "generated_tokens": 2128,
+      "seconds": 101.71020551800018
+    }
+  },
+  "primary_comparisons": {
+    "authentic_jpp_minus_shuffled_jpp": {
+      "n": 200,
+      "difference": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": 1.0,
+      "holm_p": 1.0
+    },
+    "authentic_jpp_minus_error_only": {
+      "n": 200,
+      "difference": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": 1.0,
+      "holm_p": 1.0
+    }
+  },
+  "latent_strata": {
+    "detected": {
+      "n": 0,
+      "difference": null,
+      "ci": [
+        null,
+        null
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": null
+    },
+    "not_detected": {
+      "n": 0,
+      "difference": null,
+      "ci": [
+        null,
+        null
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": null
+    }
+  },
+  "ablations": {
+    "authentic_minus_remove_target": {
+      "n": 0,
+      "difference": null,
+      "ci": [
+        null,
+        null
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": null
+    },
+    "authentic_minus_replace_target": {
+      "n": 0,
+      "difference": null,
+      "ci": [
+        null,
+        null
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": null
+    },
+    "authentic_minus_sham_remove": {
+      "n": 0,
+      "difference": null,
+      "ci": [
+        null,
+        null
+      ],
+      "wins": 0,
+      "losses": 0,
+      "p": null
+    }
+  },
+  "cost": {
+    "generation_calls": 1000,
+    "prompt_tokens": 236047,
+    "generated_tokens": 10641,
+    "generation_seconds": 494.0267820900003,
+    "readout_seconds": 18.98189437399995
+  },
+  "limitations": [
+    "Pilot estimates; no claim of introspection or native-feature causality.",
+    "Detection is best rank over the fixed layer set; identical search exposure in both lens baselines.",
+    "Shuffled source is chosen without labels. With partial first collection, the donor bank is provisional.",
+    "Intervals bootstrap independent questions within templates; they do not establish generalization to new task families.",
+    "Feedback has matched readout slots, not exactly matched serialized prompt-token lengths; actual costs are recorded.",
+    "Correct first attempts receive neutral review instructions, never a false error signal.",
+    "Oracle-guided ablations are diagnostic only. Textual intervention does not establish neural causality."
+  ]
+}
